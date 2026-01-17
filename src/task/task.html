@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="task.css" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h2 class="logo">Tasker</h2>
+    <nav>
+      <a class="active">Dashboard</a>
+    </nav>
+        <nav>
+      <a href="src/habit/habit.html">Habit Tracker</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <h1>Task Manager</h1>
+      <label for="modal-toggle" class="btn">+ New Task</label>
+    </header>
+
+    <section class="stats">
+      <div class="card">
+        <p>Total Tasks</p>
+        <h3 id="Total-Tasks">0</h3>
+      </div>
+      <div class="card">
+        <p>In Progress</p>
+        <h3 id="In-Progress">0</h3>
+      </div>
+      <div class="card">
+        <p>Completed</p>
+        <h3 id="Completed">0</h3>
+      </div>
+    </section>
+
+    <section class="tasks" id="tasks">
+      <div class="task">
+        <input type="checkbox" />
+        <span id="output"></span>
+        <span class="tag">General</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal (Pure CSS) -->
+  <input type="checkbox" id="modal-toggle" hidden />
+  <div class="modal">
+    <div class="modal-content">
+      <h2>Add Task</h2>
+
+      <input
+        type="text"
+        placeholder="Task title"
+        id="userTaskInput"
+      />
+
+      <select id="taskType">
+        <option value="General">General</option>
+        <option value="Study">Study</option>
+        <option value="Work">Work</option>
+      </select>
+
+      <div class="actions">
+        <button class="btn" id="AddBtn">Add</button>
+        <label for="modal-toggle" class="btn cancel">Cancel</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ JavaScript linked correctly -->
+  <script src="task.js"></script>
+
+</body>
+</html>
