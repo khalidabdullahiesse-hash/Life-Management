@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +7,30 @@
   <link rel="stylesheet" href="habit.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Habit Tracker</h1>
 
-    <!-- Progress Bar -->
+  <!-- ===== Sidebar ===== -->
+  <aside class="sidebar">
+    <h2 class="logo">Habit Tracker</h2>
+    <nav>
+      <a href="#" class="active">🏠 Dashboard</a>
+      <a href="../task/task.html">Task</a>
+    </nav>
+  </aside>
+
+  <!-- ===== Main Content ===== -->
+  <div class="container">
+    <h1>Weekly Habits</h1>
+
+    <!-- Progress -->
     <div class="progress-box">
       <div class="progress-label">Weekly Progress</div>
       <div class="progress-bar">
         <div class="progress-fill"></div>
       </div>
-      <div class="progress-text"></div>
+      <div id="progress-text">0%</div>
     </div>
 
+    <!-- Habits -->
     <div class="habit">
       <span>📘 Study</span>
       <div class="days">
@@ -58,11 +69,8 @@
         <button class="day"></button>
       </div>
     </div>
-
-
-
-    <script src="habit.js"></script>
-
   </div>
+
+  <script src="habit.js"></script>
 </body>
 </html>

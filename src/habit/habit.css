@@ -1,90 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
   background: #0f172a;
   color: #e5e7eb;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
+  display: flex;
 }
 
-.container {
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 220px;
   background: #020617;
-  padding: 20px 25px;
-  border-radius: 12px;
-  width: 360px;
+  border-right: 1px solid #1e293b;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-h1 {
+.sidebar .logo {
+  color: #38bdf8;
+  font-size: 20px;
   text-align: center;
-  margin-bottom: 15px;
-}
-
-/* Progress Bar */
-.progress-box {
   margin-bottom: 20px;
 }
 
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar nav a {
+  color: #cbd5f5;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: #38bdf8;
+  color: #020617;
+}
+
+/* ===== Main Container ===== */
+.container {
+  flex: 1;
+  max-width: 420px;
+  background: #020617;
+  padding: 24px;
+  border-radius: 18px;
+  margin: 30px;
+}
+
+/* ===== Title ===== */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+/* ===== Progress Box ===== */
+.progress-box {
+  background: #020617;
+  padding: 18px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #1e293b;
+}
+
 .progress-label {
-  font-size: 13px;
-  margin-bottom: 6px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #cbd5f5;
 }
 
 .progress-bar {
   width: 100%;
   height: 10px;
   background: #1e293b;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-  width: 60%;
-  background: linear-gradient(90deg, #22c55e, #4ade80);
+  width: 0%;
+  background: #38bdf8;
+  transition: width 0.3s ease;
 }
 
-.progress-text {
-  text-align: right;
-  font-size: 12px;
-  margin-top: 4px;
-  color: #86efac;
+#progress-text {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #38bdf8;
 }
 
+/* ===== Habit Cards ===== */
 .habit {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 14px;
 }
 
 .habit span {
-  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #e5e7eb;
 }
 
+/* ===== Days Buttons ===== */
 .days {
   display: flex;
   gap: 6px;
 }
 
 .day {
-  width: 18px;
-  height: 18px;
-  border-radius: 4px;
-  background: #334155;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
   border: none;
-  padding: 0;
-}
-
-.day.active {
-  background: #22c55e;
+  background: #1e293b;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
 .day:hover {
-  outline: 2px solid #22c55e;
-  cursor: pointer;
+  background: #334155;
 }
 
-.day:focus {
-  outline: 2px solid #4ade80;
+.day.active {
+  background: #38bdf8;
+  transform: scale(1.05);
+}
+a{
+  text-decoration: none;
 }
