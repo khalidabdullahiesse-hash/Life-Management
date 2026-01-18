@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #020617;
+  padding: 20px 25px;
+  border-radius: 12px;
+  width: 360px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Progress Bar */
+.progress-box {
+  margin-bottom: 20px;
+}
+
+.progress-label {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 60%;
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+}
+
+.progress-text {
+  text-align: right;
+  font-size: 12px;
+  margin-top: 4px;
+  color: #86efac;
+}
+
+.habit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.habit span {
+  font-size: 14px;
+}
+
+.days {
+  display: flex;
+  gap: 6px;
+}
+
+.day {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: #334155;
+  border: none;
+  padding: 0;
+}
+
+.day.active {
+  background: #22c55e;
+}
+
+.day:hover {
+  outline: 2px solid #22c55e;
+  cursor: pointer;
+}
+
+.day:focus {
+  outline: 2px solid #4ade80;
+}
