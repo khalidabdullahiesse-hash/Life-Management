@@ -1,0 +1,26 @@
+{
+  "app": {
+    "name": "MyApp",
+    "version": "1.0.0",
+    "language": "en",
+    "theme": "dark"
+  },
+
+  "user": {
+    "username": "Khalid",
+    "email": "khalid@example.com",
+    "isLoggedIn": false
+  },
+
+  "settings": {
+    "notifications": true,
+    "sound": true,
+    "autoSave": true,
+    "autoSaveInterval": 5
+  },
+
+  "security": {
+    "rememberMe": false,
+    "maxLoginAttempts": 5
+  }
+}
