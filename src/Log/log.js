@@ -1,19 +1,21 @@
-const nameInput = document.getElementById("Name");
+const nameInput = document.getElementById("name");
 const passwordInput = document.getElementById("password");
 const checkbox = document.getElementById("checkbox");
 const submit = document.getElementById("submit");
 
-let dataName = "";
-let dataPassword = "";
+class Contact {
+  constructor(name, age, email, password) {
+    this.name = name;
+    this.age = age;
+    this.email = email;
+    this.password = password;
+  }
+}
 
-// Fetch data
-fetch("./json/accounts.json")
-  .then(response => response.json())
-  .then(account => {
-    dataName = account.name;
-    dataPassword = account.password;
-  })
-  .catch(error => console.error("Error:", error));
+const users = [
+  new Contact("khalid", 22, "khalidabdullahiesse@gmail.com", "1234"),
+  new Contact("siciid", 23, "siciidmohmaed@gmail.com", "3515")
+];
 
 submit.addEventListener("click", (e) => {
   e.preventDefault();
@@ -23,10 +25,13 @@ submit.addEventListener("click", (e) => {
     return;
   }
 
-  if (
-    nameInput.value === dataName &&
-    passwordInput.value === dataPassword
-  ) {
+  const user = users.find(
+    u =>
+      u.name === nameInput.value &&
+      u.password === passwordInput.value
+  );
+
+  if (user) {
     window.location.href = "../task/task.html";
   } else {
     alert("Wrong username or password");
