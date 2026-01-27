@@ -75,3 +75,5 @@ function renderTasks() {
     completedEl.textContent = completed;
     inProgressEl.textContent = total - completed;
 }
+
+
