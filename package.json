@@ -1,7 +1,7 @@
 {
   "name": "life-management",
   "version": "1.0.0",
-  "description": "",
+  "description": "**✨ Description:**\r A **wide, all-in-one personal management dashboard** built entirely in **vanilla JavaScript, HTML, and CSS**. Manage **tasks, habits, goals, notes, and focus time** in a **single-page interface**. Works **offline** using **LocalStorage**, giving you a lightweight personal operating system in your browser. 🚀",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,5 +9,16 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khalidabdullahiesse-hash/Life-Management.git"
+  },
+  "bugs": {
+    "url": "https://github.com/khalidabdullahiesse-hash/Life-Management/issues"
+  },
+  "homepage": "https://github.com/khalidabdullahiesse-hash/Life-Management#readme",
+  "devDependencies": {
+    "@types/node": "^25.2.0"
+  }
 }
