@@ -37,3 +37,6 @@ submit.addEventListener("click", async (e) => {
     alert("Error fetching users");
   }
 });
+
+
+export{submit}
