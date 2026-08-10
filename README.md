@@ -1,42 +1,70 @@
+# Life Management
 
-# **🗂 Life Management Dashboard (JavaScript Web App) 🖥️**
+A collection of small browser-based productivity interfaces built with vanilla JavaScript, HTML, and CSS. The repository currently contains separate task manager, weekly habit tracker, Mogadishu clock, and login-form prototypes.
 
-**✨ Description:**
-A **wide, all-in-one personal management dashboard** built entirely in **vanilla JavaScript, HTML, and CSS**. Manage **tasks, habits, goals, notes, and focus time** in a **single-page interface**. Works **offline** using **LocalStorage**, giving you a lightweight personal operating system in your browser. 🚀
+## Implemented features
 
-**🛠️ Features:**
+### Task manager
 
-* **📋 Smart Task Manager** – Organize tasks by category, priority, and deadlines. Filter, sort, and mark tasks as done. ✅
-* **🔥 Habit Tracker** – Track daily habits, view streaks, and monitor progress.
-* **⏱️ Focus Timer** – Custom Pomodoro timer with start/pause/reset and session logging.
-* **🎯 Goal Planner** – Break down goals into steps, track completion, and view progress bars.
-* **📝 Personal Notes Vault** – Create, edit, delete, search, and tag notes.
-* **📊 Statistics Dashboard** – Visualize task completion, habit streaks, focus time, and goal progress.
+- Add a task with a General, Study, or Work category
+- Mark tasks complete
+- View total, in-progress, and completed counters
 
-**💻 Technologies:**
+### Habit tracker
 
-* Vanilla JavaScript (ES6+)
-* HTML5
-* CSS3
-* LocalStorage for data persistence 💾
+- Track three predefined habits across seven day buttons
+- View the percentage of weekly habit checks completed
+- Navigate between the habit and task pages
 
-**🌟 Why this project:**
+### Additional prototypes
 
-* Wide scope – practice **complex JS logic**.
-* Offline, no frameworks or libraries.
-* Modular and structured code – perfect for your **GitHub portfolio**.
+- Display Mogadishu time using the WorldTimeAPI service
+- Validate a login form against a JSON response expected from a local endpoint
 
-**🎨 Optional Add-ons:**
+## Technology
 
-* 🌙 Dark/Light mode
-* ⌨️ Keyboard shortcuts
-* 📂 Export/import data as JSON
-* 👤 User profile with avatar
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Browser DOM and event APIs
+- Fetch API
 
-**🚀 Getting Started:**
+## Run locally
 
-1. Clone the repository
-2. Open `index.html` in your browser
-3. Start managing your tasks, habits, goals, notes, and focus time 🎉
+No build step is required. Start a static server from the repository root:
 
----
+```powershell
+python -m http.server 8000
+```
+
+Then open:
+
+- Task manager: <http://localhost:8000/src/task/task.html>
+- Habit tracker: <http://localhost:8000/src/habit/habit.html>
+- Mogadishu clock: <http://localhost:8000/src/timer/timer.html>
+- Login prototype: <http://localhost:8000/src/Log/log.html>
+
+The clock requires an internet connection to call WorldTimeAPI. The login prototype also expects a separate JSON endpoint at `http://localhost:3000/users.json`.
+
+## Data persistence and offline behavior
+
+The current task and habit data are stored only in JavaScript memory. They reset when the page reloads, and the repository does not currently use LocalStorage for persistence. The task and habit interfaces can run from local static files, while the clock and login prototypes depend on external or local HTTP services.
+
+## Scope
+
+Goals, notes management, focus sessions, search, streak tracking, data export/import, theme switching, and keyboard shortcuts are not implemented in the current codebase.
+
+## Skills demonstrated
+
+- DOM creation and updates
+- Form and button event handling
+- In-memory state and derived progress counters
+- Basic responsive page styling
+- Fetching JSON from an HTTP endpoint
+
+## Author
+
+Khalid Abdullahi Isse
+
+[GitHub](https://github.com/khalidabdullahiesse-hash) · [LinkedIn](https://www.linkedin.com/in/khalid-abdullahi-isse-0461a3366)
+
